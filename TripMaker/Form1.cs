@@ -173,6 +173,7 @@ namespace TripMaker
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        //header panel drag
         public void pnlControl_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
