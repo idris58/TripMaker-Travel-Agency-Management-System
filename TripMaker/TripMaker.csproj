@@ -539,5 +539,14 @@
   <ItemGroup>
     <None Include="Resources\Manage User.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bus Card.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flight Card.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Train Card.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

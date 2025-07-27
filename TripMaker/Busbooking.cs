@@ -57,12 +57,6 @@ namespace TripMaker
             set { price = value; lblprice.Text = value; }
         }
 
-        public string Btype
-        {
-            get { return btype; }
-            set { btype = value; lbltype.Text = value; }
-        }
-
         public void btnbook_Click(object sender, EventArgs e)
         {
             if (!Session.IsLoggedIn)
@@ -78,7 +72,6 @@ namespace TripMaker
             busConfirmBookInstance.DepTime = this.DepTime;
             busConfirmBookInstance.ArrTime = this.ArrTime;
             busConfirmBookInstance.Price = this.Price;
-            busConfirmBookInstance.Btype = this.Btype;
 
             Busconfirmbook.Instance.busconfirmbook_Load();
             Busconfirmbook.Instance.BringToFront();

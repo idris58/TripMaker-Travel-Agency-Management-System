@@ -121,17 +121,23 @@
   <data name="Logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="airline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\photo\airline.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Hotel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hotel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ManageBus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ManageBus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Flight Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Flight Card.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bus Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bus Card.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ManageActivity" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ManageActivity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\photo\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ManageHotelRoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ManageHotelRoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,31 +160,34 @@
   <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\photo\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\photo\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eye1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\photo\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Others" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Others.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Green-Check-Mark-PNG-Free-Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Green-Check-Mark-PNG-Free-Download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ManageTrain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ManageTrain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="airline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\photo\airline.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CloseB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CloseB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eye1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\photo\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Manage User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Manage User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Green-Check-Mark-PNG-Free-Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Green-Check-Mark-PNG-Free-Download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Others" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Others.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imageIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\photo\imageIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ManageTrain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ManageTrain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="homeLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homeLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Manage User" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Manage User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Train Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Train Card.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

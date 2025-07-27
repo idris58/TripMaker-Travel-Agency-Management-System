@@ -113,7 +113,6 @@ namespace TripMaker
                         DepTime = Convert.ToDateTime(dt.Rows[i]["Departure_Time"]).ToString("HH:mm"),
                         ArrTime = Convert.ToDateTime(dt.Rows[i]["Arrival_Time"]).ToString("HH:mm"),
                         Price = dt.Rows[i]["Price"].ToString() + " BDT",
-                        Btype = dt.Rows[i]["Type"].ToString()
                     };
 
                     flowLayoutPanel1.Controls.Add(operetor[i]);
