@@ -50,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(609, 51);
+            this.label1.Location = new System.Drawing.Point(605, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 19);
@@ -62,7 +62,7 @@
             this.aaa.AutoSize = true;
             this.aaa.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.aaa.ForeColor = System.Drawing.Color.Black;
-            this.aaa.Location = new System.Drawing.Point(495, 52);
+            this.aaa.Location = new System.Drawing.Point(488, 52);
             this.aaa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aaa.Name = "aaa";
             this.aaa.Size = new System.Drawing.Size(84, 19);
@@ -74,7 +74,7 @@
             this.aa.AutoSize = true;
             this.aa.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.aa.ForeColor = System.Drawing.Color.Black;
-            this.aa.Location = new System.Drawing.Point(358, 52);
+            this.aa.Location = new System.Drawing.Point(353, 52);
             this.aa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aa.Name = "aa";
             this.aa.Size = new System.Drawing.Size(113, 19);
@@ -99,7 +99,7 @@
             this.lblprice.AutoSize = true;
             this.lblprice.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lblprice.ForeColor = System.Drawing.Color.Black;
-            this.lblprice.Location = new System.Drawing.Point(610, 81);
+            this.lblprice.Location = new System.Drawing.Point(600, 82);
             this.lblprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(33, 19);
@@ -111,7 +111,7 @@
             this.lblarvT.AutoSize = true;
             this.lblarvT.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lblarvT.ForeColor = System.Drawing.Color.Black;
-            this.lblarvT.Location = new System.Drawing.Point(504, 81);
+            this.lblarvT.Location = new System.Drawing.Point(497, 82);
             this.lblarvT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblarvT.Name = "lblarvT";
             this.lblarvT.Size = new System.Drawing.Size(70, 19);
@@ -123,7 +123,7 @@
             this.lblEnding.AutoSize = true;
             this.lblEnding.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnding.ForeColor = System.Drawing.Color.Black;
-            this.lblEnding.Location = new System.Drawing.Point(270, 77);
+            this.lblEnding.Location = new System.Drawing.Point(270, 83);
             this.lblEnding.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEnding.Name = "lblEnding";
             this.lblEnding.Size = new System.Drawing.Size(55, 19);
@@ -135,7 +135,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(178, 77);
+            this.label6.Location = new System.Drawing.Point(178, 83);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 17);
@@ -171,7 +171,7 @@
             this.lbldepT.AutoSize = true;
             this.lbldepT.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lbldepT.ForeColor = System.Drawing.Color.Black;
-            this.lbldepT.Location = new System.Drawing.Point(375, 81);
+            this.lbldepT.Location = new System.Drawing.Point(370, 82);
             this.lbldepT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbldepT.Name = "lbldepT";
             this.lbldepT.Size = new System.Drawing.Size(70, 19);

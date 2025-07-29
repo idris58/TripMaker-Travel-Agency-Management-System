@@ -173,6 +173,16 @@ namespace TripMaker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hotel_Card {
+            get {
+                object obj = ResourceManager.GetObject("Hotel Card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imageIcon {
             get {
                 object obj = ResourceManager.GetObject("imageIcon", resourceCulture);

@@ -51,7 +51,7 @@ namespace TripMaker
             this.lbldepT.AutoSize = true;
             this.lbldepT.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lbldepT.ForeColor = System.Drawing.Color.Black;
-            this.lbldepT.Location = new System.Drawing.Point(371, 77);
+            this.lbldepT.Location = new System.Drawing.Point(369, 79);
             this.lbldepT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbldepT.Name = "lbldepT";
             this.lbldepT.Size = new System.Drawing.Size(70, 19);
@@ -109,7 +109,7 @@ namespace TripMaker
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(172, 72);
+            this.label6.Location = new System.Drawing.Point(172, 80);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 17);
@@ -121,7 +121,7 @@ namespace TripMaker
             this.lblEnding.AutoSize = true;
             this.lblEnding.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnding.ForeColor = System.Drawing.Color.Black;
-            this.lblEnding.Location = new System.Drawing.Point(264, 72);
+            this.lblEnding.Location = new System.Drawing.Point(264, 80);
             this.lblEnding.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEnding.Name = "lblEnding";
             this.lblEnding.Size = new System.Drawing.Size(55, 19);
@@ -133,7 +133,7 @@ namespace TripMaker
             this.lblarvT.AutoSize = true;
             this.lblarvT.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lblarvT.ForeColor = System.Drawing.Color.Black;
-            this.lblarvT.Location = new System.Drawing.Point(501, 77);
+            this.lblarvT.Location = new System.Drawing.Point(495, 79);
             this.lblarvT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblarvT.Name = "lblarvT";
             this.lblarvT.Size = new System.Drawing.Size(70, 19);
@@ -145,7 +145,7 @@ namespace TripMaker
             this.lblprice.AutoSize = true;
             this.lblprice.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lblprice.ForeColor = System.Drawing.Color.Black;
-            this.lblprice.Location = new System.Drawing.Point(605, 77);
+            this.lblprice.Location = new System.Drawing.Point(594, 79);
             this.lblprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(33, 19);
@@ -170,7 +170,7 @@ namespace TripMaker
             this.aa.AutoSize = true;
             this.aa.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.aa.ForeColor = System.Drawing.Color.Black;
-            this.aa.Location = new System.Drawing.Point(354, 48);
+            this.aa.Location = new System.Drawing.Point(352, 48);
             this.aa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aa.Name = "aa";
             this.aa.Size = new System.Drawing.Size(113, 19);
@@ -182,7 +182,7 @@ namespace TripMaker
             this.aaa.AutoSize = true;
             this.aaa.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.aaa.ForeColor = System.Drawing.Color.Black;
-            this.aaa.Location = new System.Drawing.Point(492, 48);
+            this.aaa.Location = new System.Drawing.Point(486, 48);
             this.aaa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aaa.Name = "aaa";
             this.aaa.Size = new System.Drawing.Size(84, 19);
@@ -194,7 +194,7 @@ namespace TripMaker
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(604, 47);
+            this.label1.Location = new System.Drawing.Point(600, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 19);

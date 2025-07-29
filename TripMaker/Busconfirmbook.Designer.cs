@@ -33,6 +33,7 @@ namespace TripMaker
             this.lblDate = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbResturant = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.aaa = new System.Windows.Forms.Label();
             this.aa = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@ namespace TripMaker
             this.label3 = new System.Windows.Forms.Label();
             this.Lblname = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbltype = new System.Windows.Forms.Label();
             this.gbPaymentMethods = new System.Windows.Forms.GroupBox();
             this.radioBkash = new System.Windows.Forms.RadioButton();
             this.radioUpay = new System.Windows.Forms.RadioButton();
@@ -58,6 +58,7 @@ namespace TripMaker
             this.pnlSeatNo = new System.Windows.Forms.FlowLayoutPanel();
             this.panel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbResturant)).BeginInit();
             this.gbPaymentMethods.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,6 +98,7 @@ namespace TripMaker
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pbResturant);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.aaa);
             this.panel1.Controls.Add(this.aa);
@@ -109,19 +111,29 @@ namespace TripMaker
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Lblname);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.lbltype);
             this.panel1.Location = new System.Drawing.Point(2, 43);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(697, 154);
             this.panel1.TabIndex = 30;
             // 
+            // pbResturant
+            // 
+            this.pbResturant.Image = global::TripMaker.Properties.Resources.Bus_Card;
+            this.pbResturant.Location = new System.Drawing.Point(16, 16);
+            this.pbResturant.Margin = new System.Windows.Forms.Padding(2);
+            this.pbResturant.Name = "pbResturant";
+            this.pbResturant.Size = new System.Drawing.Size(159, 116);
+            this.pbResturant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbResturant.TabIndex = 111;
+            this.pbResturant.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(576, 55);
+            this.label2.Location = new System.Drawing.Point(627, 55);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 19);
@@ -133,7 +145,7 @@ namespace TripMaker
             this.aaa.AutoSize = true;
             this.aaa.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.aaa.ForeColor = System.Drawing.Color.Black;
-            this.aaa.Location = new System.Drawing.Point(424, 56);
+            this.aaa.Location = new System.Drawing.Point(514, 56);
             this.aaa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aaa.Name = "aaa";
             this.aaa.Size = new System.Drawing.Size(84, 19);
@@ -145,7 +157,7 @@ namespace TripMaker
             this.aa.AutoSize = true;
             this.aa.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.aa.ForeColor = System.Drawing.Color.Black;
-            this.aa.Location = new System.Drawing.Point(288, 56);
+            this.aa.Location = new System.Drawing.Point(379, 56);
             this.aa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aa.Name = "aa";
             this.aa.Size = new System.Drawing.Size(113, 19);
@@ -157,7 +169,7 @@ namespace TripMaker
             this.lblprice.AutoSize = true;
             this.lblprice.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lblprice.ForeColor = System.Drawing.Color.Black;
-            this.lblprice.Location = new System.Drawing.Point(577, 85);
+            this.lblprice.Location = new System.Drawing.Point(623, 88);
             this.lblprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(33, 19);
@@ -169,7 +181,7 @@ namespace TripMaker
             this.lblarvT.AutoSize = true;
             this.lblarvT.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lblarvT.ForeColor = System.Drawing.Color.Black;
-            this.lblarvT.Location = new System.Drawing.Point(433, 85);
+            this.lblarvT.Location = new System.Drawing.Point(523, 88);
             this.lblarvT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblarvT.Name = "lblarvT";
             this.lblarvT.Size = new System.Drawing.Size(70, 19);
@@ -181,7 +193,7 @@ namespace TripMaker
             this.lbldepT.AutoSize = true;
             this.lbldepT.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lbldepT.ForeColor = System.Drawing.Color.Black;
-            this.lbldepT.Location = new System.Drawing.Point(305, 85);
+            this.lbldepT.Location = new System.Drawing.Point(396, 88);
             this.lbldepT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbldepT.Name = "lbldepT";
             this.lbldepT.Size = new System.Drawing.Size(70, 19);
@@ -193,7 +205,7 @@ namespace TripMaker
             this.lblEnding.AutoSize = true;
             this.lblEnding.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnding.ForeColor = System.Drawing.Color.Black;
-            this.lblEnding.Location = new System.Drawing.Point(160, 108);
+            this.lblEnding.Location = new System.Drawing.Point(280, 89);
             this.lblEnding.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEnding.Name = "lblEnding";
             this.lblEnding.Size = new System.Drawing.Size(55, 19);
@@ -205,7 +217,7 @@ namespace TripMaker
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(68, 108);
+            this.label6.Location = new System.Drawing.Point(188, 89);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 17);
@@ -217,7 +229,7 @@ namespace TripMaker
             this.lblstart.AutoSize = true;
             this.lblstart.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblstart.ForeColor = System.Drawing.Color.Black;
-            this.lblstart.Location = new System.Drawing.Point(160, 86);
+            this.lblstart.Location = new System.Drawing.Point(280, 58);
             this.lblstart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblstart.Name = "lblstart";
             this.lblstart.Size = new System.Drawing.Size(61, 19);
@@ -229,7 +241,7 @@ namespace TripMaker
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(68, 86);
+            this.label3.Location = new System.Drawing.Point(188, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 17);
@@ -241,7 +253,7 @@ namespace TripMaker
             this.Lblname.AutoSize = true;
             this.Lblname.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lblname.ForeColor = System.Drawing.Color.Red;
-            this.Lblname.Location = new System.Drawing.Point(67, 23);
+            this.Lblname.Location = new System.Drawing.Point(350, 21);
             this.Lblname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lblname.Name = "Lblname";
             this.Lblname.Size = new System.Drawing.Size(74, 23);
@@ -257,18 +269,6 @@ namespace TripMaker
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(551, 4);
             this.panel2.TabIndex = 91;
-            // 
-            // lbltype
-            // 
-            this.lbltype.AutoSize = true;
-            this.lbltype.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltype.ForeColor = System.Drawing.Color.Black;
-            this.lbltype.Location = new System.Drawing.Point(68, 56);
-            this.lbltype.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbltype.Name = "lbltype";
-            this.lbltype.Size = new System.Drawing.Size(98, 19);
-            this.lbltype.TabIndex = 90;
-            this.lbltype.Text = "Hyundai , Ac";
             // 
             // gbPaymentMethods
             // 
@@ -422,6 +422,7 @@ namespace TripMaker
             this.panel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbResturant)).EndInit();
             this.gbPaymentMethods.ResumeLayout(false);
             this.gbPaymentMethods.PerformLayout();
             this.ResumeLayout(false);
@@ -441,7 +442,6 @@ namespace TripMaker
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Lblname;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lbltype;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label aaa;
         private System.Windows.Forms.Label aa;
@@ -458,5 +458,6 @@ namespace TripMaker
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel pnlSeatNo;
+        private System.Windows.Forms.PictureBox pbResturant;
     }
 }

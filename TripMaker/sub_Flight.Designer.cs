@@ -49,7 +49,7 @@ namespace TripMaker
             this.lblLandTime.AutoSize = true;
             this.lblLandTime.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.lblLandTime.ForeColor = System.Drawing.Color.Black;
-            this.lblLandTime.Location = new System.Drawing.Point(476, 78);
+            this.lblLandTime.Location = new System.Drawing.Point(477, 79);
             this.lblLandTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLandTime.Name = "lblLandTime";
             this.lblLandTime.Size = new System.Drawing.Size(80, 20);
@@ -61,7 +61,7 @@ namespace TripMaker
             this.lblDepTime.AutoSize = true;
             this.lblDepTime.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.lblDepTime.ForeColor = System.Drawing.Color.Black;
-            this.lblDepTime.Location = new System.Drawing.Point(333, 78);
+            this.lblDepTime.Location = new System.Drawing.Point(334, 79);
             this.lblDepTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepTime.Name = "lblDepTime";
             this.lblDepTime.Size = new System.Drawing.Size(80, 20);
@@ -73,7 +73,7 @@ namespace TripMaker
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(189, 78);
+            this.lblDate.Location = new System.Drawing.Point(190, 79);
             this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(79, 20);
@@ -85,7 +85,7 @@ namespace TripMaker
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.lblPrice.ForeColor = System.Drawing.Color.Black;
-            this.lblPrice.Location = new System.Drawing.Point(602, 77);
+            this.lblPrice.Location = new System.Drawing.Point(603, 78);
             this.lblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(55, 20);

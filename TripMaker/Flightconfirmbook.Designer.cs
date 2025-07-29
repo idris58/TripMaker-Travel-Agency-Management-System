@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLandTime = new System.Windows.Forms.Label();
             this.lblDepTime = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblprice = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,9 +52,11 @@
             this.cmbNumber = new System.Windows.Forms.ComboBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.pbResturant = new System.Windows.Forms.PictureBox();
             this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.gbPaymentMethods.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbResturant)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -67,12 +69,24 @@
             this.panel.Size = new System.Drawing.Size(701, 40);
             this.panel.TabIndex = 32;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(298, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(169, 23);
+            this.label4.TabIndex = 97;
+            this.label4.Text = "Confirm Payment";
+            // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.lblDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDate.Location = new System.Drawing.Point(128, 85);
+            this.lblDate.Location = new System.Drawing.Point(204, 85);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(45, 20);
             this.lblDate.TabIndex = 20;
@@ -93,6 +107,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pbResturant);
             this.panel3.Controls.Add(this.lblDate);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lblLandTime);
@@ -114,7 +129,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(554, 55);
+            this.label1.Location = new System.Drawing.Point(616, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 20);
@@ -126,7 +141,7 @@
             this.lblLandTime.AutoSize = true;
             this.lblLandTime.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.lblLandTime.ForeColor = System.Drawing.Color.Black;
-            this.lblLandTime.Location = new System.Drawing.Point(400, 85);
+            this.lblLandTime.Location = new System.Drawing.Point(470, 85);
             this.lblLandTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLandTime.Name = "lblLandTime";
             this.lblLandTime.Size = new System.Drawing.Size(80, 20);
@@ -138,31 +153,19 @@
             this.lblDepTime.AutoSize = true;
             this.lblDepTime.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.lblDepTime.ForeColor = System.Drawing.Color.Black;
-            this.lblDepTime.Location = new System.Drawing.Point(259, 85);
+            this.lblDepTime.Location = new System.Drawing.Point(329, 85);
             this.lblDepTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepTime.Name = "lblDepTime";
             this.lblDepTime.Size = new System.Drawing.Size(80, 20);
             this.lblDepTime.TabIndex = 98;
             this.lblDepTime.Text = "xx pm/pm";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(298, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 23);
-            this.label4.TabIndex = 97;
-            this.label4.Text = "Confirm Payment";
-            // 
             // lblprice
             // 
             this.lblprice.AutoSize = true;
             this.lblprice.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.lblprice.ForeColor = System.Drawing.Color.Black;
-            this.lblprice.Location = new System.Drawing.Point(544, 84);
+            this.lblprice.Location = new System.Drawing.Point(606, 84);
             this.lblprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(55, 20);
@@ -174,7 +177,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(389, 54);
+            this.label7.Location = new System.Drawing.Point(459, 54);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 20);
@@ -186,7 +189,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(229, 54);
+            this.label8.Location = new System.Drawing.Point(303, 54);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 20);
@@ -198,7 +201,7 @@
             this.a.AutoSize = true;
             this.a.Font = new System.Drawing.Font("Century Gothic", 10.8F);
             this.a.ForeColor = System.Drawing.Color.Black;
-            this.a.Location = new System.Drawing.Point(128, 54);
+            this.a.Location = new System.Drawing.Point(204, 54);
             this.a.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.a.Name = "a";
             this.a.Size = new System.Drawing.Size(45, 20);
@@ -208,12 +211,12 @@
             // lblAirlineName
             // 
             this.lblAirlineName.AutoSize = true;
-            this.lblAirlineName.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAirlineName.Font = new System.Drawing.Font("Century Gothic", 13.4F, System.Drawing.FontStyle.Bold);
             this.lblAirlineName.ForeColor = System.Drawing.Color.Red;
-            this.lblAirlineName.Location = new System.Drawing.Point(44, 19);
+            this.lblAirlineName.Location = new System.Drawing.Point(352, 19);
             this.lblAirlineName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAirlineName.Name = "lblAirlineName";
-            this.lblAirlineName.Size = new System.Drawing.Size(55, 18);
+            this.lblAirlineName.Size = new System.Drawing.Size(64, 22);
             this.lblAirlineName.TabIndex = 92;
             this.lblAirlineName.Text = "Airline";
             // 
@@ -359,6 +362,17 @@
             this.label3.TabIndex = 49;
             this.label3.Text = "Select Number";
             // 
+            // pbResturant
+            // 
+            this.pbResturant.Image = global::TripMaker.Properties.Resources.Flight_Card;
+            this.pbResturant.Location = new System.Drawing.Point(16, 7);
+            this.pbResturant.Margin = new System.Windows.Forms.Padding(2);
+            this.pbResturant.Name = "pbResturant";
+            this.pbResturant.Size = new System.Drawing.Size(158, 120);
+            this.pbResturant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbResturant.TabIndex = 102;
+            this.pbResturant.TabStop = false;
+            // 
             // Flightconfirmbook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -381,6 +395,7 @@
             this.panel3.PerformLayout();
             this.gbPaymentMethods.ResumeLayout(false);
             this.gbPaymentMethods.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbResturant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,5 +427,6 @@
         private System.Windows.Forms.ComboBox cmbNumber;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbResturant;
     }
 }

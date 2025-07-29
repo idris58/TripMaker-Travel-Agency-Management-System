@@ -65,13 +65,6 @@ namespace TripMaker
             set { price = value; lblprice.Text = value; }
         }
 
-
-        public string Ttype
-        {
-            get => type;
-            set { type = value; lbltype.Text = value; }
-        }
-
         public string DateTimePicker
         {
             get => dateTimePicker;

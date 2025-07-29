@@ -31,7 +31,6 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
-            this.lbltype = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lblEnding = new System.Windows.Forms.Label();
@@ -55,9 +54,11 @@
             this.cmbNumber = new System.Windows.Forms.ComboBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.pbResturant = new System.Windows.Forms.PictureBox();
             this.panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbPaymentMethods.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbResturant)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -94,18 +95,6 @@
             this.panel.Size = new System.Drawing.Size(701, 40);
             this.panel.TabIndex = 31;
             // 
-            // lbltype
-            // 
-            this.lbltype.AutoSize = true;
-            this.lbltype.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltype.ForeColor = System.Drawing.Color.Black;
-            this.lbltype.Location = new System.Drawing.Point(68, 56);
-            this.lbltype.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbltype.Name = "lbltype";
-            this.lbltype.Size = new System.Drawing.Size(98, 19);
-            this.lbltype.TabIndex = 90;
-            this.lbltype.Text = "Hyundai , Ac";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
@@ -121,7 +110,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(68, 108);
+            this.label6.Location = new System.Drawing.Point(182, 90);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 17);
@@ -133,7 +122,7 @@
             this.lblEnding.AutoSize = true;
             this.lblEnding.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnding.ForeColor = System.Drawing.Color.Black;
-            this.lblEnding.Location = new System.Drawing.Point(160, 108);
+            this.lblEnding.Location = new System.Drawing.Point(274, 90);
             this.lblEnding.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEnding.Name = "lblEnding";
             this.lblEnding.Size = new System.Drawing.Size(55, 19);
@@ -145,7 +134,7 @@
             this.lbldepT.AutoSize = true;
             this.lbldepT.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lbldepT.ForeColor = System.Drawing.Color.Black;
-            this.lbldepT.Location = new System.Drawing.Point(305, 85);
+            this.lbldepT.Location = new System.Drawing.Point(388, 88);
             this.lbldepT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbldepT.Name = "lbldepT";
             this.lbldepT.Size = new System.Drawing.Size(70, 19);
@@ -157,7 +146,7 @@
             this.lblarvT.AutoSize = true;
             this.lblarvT.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lblarvT.ForeColor = System.Drawing.Color.Black;
-            this.lblarvT.Location = new System.Drawing.Point(433, 85);
+            this.lblarvT.Location = new System.Drawing.Point(514, 88);
             this.lblarvT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblarvT.Name = "lblarvT";
             this.lblarvT.Size = new System.Drawing.Size(70, 19);
@@ -169,7 +158,7 @@
             this.lblprice.AutoSize = true;
             this.lblprice.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.lblprice.ForeColor = System.Drawing.Color.Black;
-            this.lblprice.Location = new System.Drawing.Point(577, 85);
+            this.lblprice.Location = new System.Drawing.Point(618, 88);
             this.lblprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(33, 19);
@@ -181,7 +170,7 @@
             this.aa.AutoSize = true;
             this.aa.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.aa.ForeColor = System.Drawing.Color.Black;
-            this.aa.Location = new System.Drawing.Point(288, 56);
+            this.aa.Location = new System.Drawing.Point(371, 56);
             this.aa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aa.Name = "aa";
             this.aa.Size = new System.Drawing.Size(113, 19);
@@ -193,7 +182,7 @@
             this.aaa.AutoSize = true;
             this.aaa.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.aaa.ForeColor = System.Drawing.Color.Black;
-            this.aaa.Location = new System.Drawing.Point(424, 56);
+            this.aaa.Location = new System.Drawing.Point(505, 56);
             this.aaa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aaa.Name = "aaa";
             this.aaa.Size = new System.Drawing.Size(84, 19);
@@ -205,7 +194,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.5F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(576, 55);
+            this.label2.Location = new System.Drawing.Point(624, 55);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 19);
@@ -214,6 +203,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pbResturant);
             this.panel1.Controls.Add(this.lblstart);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Lblname);
@@ -226,7 +216,6 @@
             this.panel1.Controls.Add(this.lblEnding);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.lbltype);
             this.panel1.Location = new System.Drawing.Point(2, 44);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -238,7 +227,7 @@
             this.lblstart.AutoSize = true;
             this.lblstart.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblstart.ForeColor = System.Drawing.Color.Black;
-            this.lblstart.Location = new System.Drawing.Point(162, 83);
+            this.lblstart.Location = new System.Drawing.Point(277, 56);
             this.lblstart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblstart.Name = "lblstart";
             this.lblstart.Size = new System.Drawing.Size(67, 19);
@@ -250,7 +239,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(67, 83);
+            this.label3.Location = new System.Drawing.Point(182, 56);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 17);
@@ -262,7 +251,7 @@
             this.Lblname.AutoSize = true;
             this.Lblname.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lblname.ForeColor = System.Drawing.Color.Red;
-            this.Lblname.Location = new System.Drawing.Point(64, 20);
+            this.Lblname.Location = new System.Drawing.Point(352, 20);
             this.Lblname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lblname.Name = "Lblname";
             this.Lblname.Size = new System.Drawing.Size(83, 23);
@@ -401,6 +390,17 @@
             this.label4.TabIndex = 56;
             this.label4.Text = "Select Number";
             // 
+            // pbResturant
+            // 
+            this.pbResturant.Image = global::TripMaker.Properties.Resources.Train_Card;
+            this.pbResturant.Location = new System.Drawing.Point(14, 15);
+            this.pbResturant.Margin = new System.Windows.Forms.Padding(2);
+            this.pbResturant.Name = "pbResturant";
+            this.pbResturant.Size = new System.Drawing.Size(159, 116);
+            this.pbResturant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbResturant.TabIndex = 114;
+            this.pbResturant.TabStop = false;
+            // 
             // TrainConfirmBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,6 +422,7 @@
             this.panel1.PerformLayout();
             this.gbPaymentMethods.ResumeLayout(false);
             this.gbPaymentMethods.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbResturant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,7 +432,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Label lbltype;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblEnding;
@@ -455,5 +455,6 @@
         private System.Windows.Forms.ComboBox cmbNumber;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pbResturant;
     }
 }
