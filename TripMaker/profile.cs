@@ -87,7 +87,7 @@ namespace TripMaker
         {
             using (MemoryStream ms = new MemoryStream(data))
             {
-                return Image.FromStream(ms);
+                return new Bitmap(Image.FromStream(ms));
             }
         }
 
@@ -144,7 +144,7 @@ namespace TripMaker
                         byte[] imageBytes = (byte[])row["Profile_Image"];
                         using (MemoryStream ms = new MemoryStream(imageBytes))
                         {
-                            ((PictureBox)Profileedit.Instance.Controls["picturebox"]).Image = Image.FromStream(ms); 
+                            ((PictureBox)Profileedit.Instance.Controls["picturebox"]).Image = new Bitmap(Image.FromStream(ms));
                         }
                     }
                 }

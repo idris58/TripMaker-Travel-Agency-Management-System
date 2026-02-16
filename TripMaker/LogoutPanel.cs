@@ -89,7 +89,7 @@ namespace TripMaker
                         {
                             using (var ms = new MemoryStream(imageBytes))
                             {
-                                ((PictureBox)profile.Instance.Controls["picturebox"]).BackgroundImage = Image.FromStream(ms);
+                                ((PictureBox)profile.Instance.Controls["picturebox"]).BackgroundImage = new Bitmap(Image.FromStream(ms));
                                 ((PictureBox)profile.Instance.Controls["picturebox"]).BackgroundImageLayout = ImageLayout.Stretch;
                             }
                         }

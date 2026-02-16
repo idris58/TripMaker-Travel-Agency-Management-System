@@ -162,7 +162,7 @@ namespace TripMaker
         {
             using (MemoryStream ms = new MemoryStream(data))
             {
-                return Image.FromStream(ms);
+                return new Bitmap(Image.FromStream(ms));
             }
         }
 
