@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Data;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -23,8 +24,29 @@ namespace TripMaker
         public Form1()
         {
             InitializeComponent();
+            ConfigureSidebarButtons();
         }
 
+        
+        private void ConfigureSidebarButtons()
+        {
+            Color navBackColor = panel1.BackColor;
+            Button[] navButtons =
+            {
+                btnHome, btnBus, btnFlight, btnTrain, btnHotel, btnActivity, btnBookingInfo, btnAbout
+            };
+
+            foreach (var btn in navButtons)
+            {
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.MouseOverBackColor = navBackColor;
+                btn.FlatAppearance.MouseDownBackColor = navBackColor;
+                btn.BackColor = navBackColor;
+                btn.UseVisualStyleBackColor = false;
+                btn.TabStop = false;
+            }
+        }
         public void red_panel_changed(bool home, bool bus, bool flight, bool train, bool hotel, bool activity, bool wallet, bool about)
         {
             pnlHome.Visible = home;
@@ -90,6 +112,8 @@ namespace TripMaker
                     About.Instance.BringToFront();
                     break;
             }
+
+            this.ActiveControl = null;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -185,3 +209,7 @@ namespace TripMaker
         }
     }
 }
+
+
+
+
