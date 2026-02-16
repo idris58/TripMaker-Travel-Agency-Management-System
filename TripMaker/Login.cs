@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -74,52 +73,40 @@ namespace TripMaker
                 using (OracleConnection con = new OracleConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString))
                 {
                     con.Open();
-                    string query = "";
-
-                    if (!cbAdmin.Checked)
-                    {
-                        query = "SELECT * FROM Customer WHERE C_Username = :un AND Password = :pass";
-                    }
-                    else
-                    {
-                        query = "SELECT * FROM Admin WHERE Admin_Username = :un AND Password = :pass";
-                    }
+                    string query = !cbAdmin.Checked
+                        ? "SELECT 1 FROM Customer WHERE C_Username = :un AND Password = :pass"
+                        : "SELECT 1 FROM Admin WHERE Admin_Username = :un AND Password = :pass";
 
                     using (OracleCommand cmd = new OracleCommand(query, con))
                     {
-                        cmd.Parameters.Add("username", OracleDbType.Varchar2).Value = un;
-                        cmd.Parameters.Add("password", OracleDbType.Varchar2).Value = pass;
+                        cmd.BindByName = true;
+                        cmd.Parameters.Add(":un", OracleDbType.Varchar2).Value = un;
+                        cmd.Parameters.Add(":pass", OracleDbType.Varchar2).Value = pass;
 
-                        using (OracleDataAdapter adapter = new OracleDataAdapter(cmd))
+                        object result = cmd.ExecuteScalar();
+                        if (result == null)
                         {
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
+                            MessageBox.Show("Invalid Username or Password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
 
-                            if (dt.Rows.Count == 0)
-                            {
-                                MessageBox.Show("Invalid Username or Password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-
-                            if (!cbAdmin.Checked)
-                            {
-                                ClearData();
-                                Session.LoggedInUsername = un;
-                                Session.IsAdmin = false;
-                                Home.Instance.BringToFront();
-                                LogoutPanel.Instance.BringToFront();
-
-                            }
-                            else
-                            {
-                                ClearData();
-                                Session.LoggedInUsername = un;
-                                Session.IsAdmin = true;
-                                AdminHome obj = new AdminHome();
-                                LogoutPanel.Instance.BringToFront();
-                                ParentForm.Hide();
-                                obj.Show();
-                            }
+                        if (!cbAdmin.Checked)
+                        {
+                            ClearData();
+                            Session.LoggedInUsername = un;
+                            Session.IsAdmin = false;
+                            Home.Instance.BringToFront();
+                            LogoutPanel.Instance.BringToFront();
+                        }
+                        else
+                        {
+                            ClearData();
+                            Session.LoggedInUsername = un;
+                            Session.IsAdmin = true;
+                            AdminHome obj = new AdminHome();
+                            LogoutPanel.Instance.BringToFront();
+                            ParentForm.Hide();
+                            obj.Show();
                         }
                     }
                 }

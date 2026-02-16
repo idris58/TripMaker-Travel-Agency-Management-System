@@ -50,7 +50,7 @@ namespace TripMaker
             try
             {
                 string query = @"
-                   SELECT c.Name, c.C_Username, c.Email, c.Phone, c.Gender, c.Profile_Image,
+                   SELECT c.Name, c.C_Username, c.Email, c.Phone, c.Gender,
                    a.Street, a.City, a.Country
                    FROM Customer c
                    LEFT JOIN Address a ON c.A_ID = a.A_ID
@@ -81,29 +81,7 @@ namespace TripMaker
 
                     string address = $"{row["Street"]}, {row["City"]}, {row["Country"]}";
                     profile.Instance.Controls["lbladrs"].Text = address;
-
-                    if (row["Profile_Image"] != DBNull.Value)
-                    {
-                        byte[] imageBytes = (byte[])row["Profile_Image"];
-                        try
-                        {
-                            using (var ms = new MemoryStream(imageBytes))
-                            {
-                                ((PictureBox)profile.Instance.Controls["picturebox"]).BackgroundImage = new Bitmap(Image.FromStream(ms));
-                                ((PictureBox)profile.Instance.Controls["picturebox"]).BackgroundImageLayout = ImageLayout.Stretch;
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Could not load image: " + ex.Message);
-                            ((PictureBox)profile.Instance.Controls["picturebox"]).BackgroundImage = null;
-                        }
-                    }
-                    else
-                    {
-                        ((PictureBox)profile.Instance.Controls["picturebox"]).BackgroundImage = null;
-                    }
-
+                    LoadProfileImage(Session.LoggedInUsername);
                 }
             }
             catch (Exception ex)
@@ -112,6 +90,21 @@ namespace TripMaker
             }
 
             profile.Instance.BringToFront();
+        }
+
+        private void LoadProfileImage(string username)
+        {
+            var pictureBox = (PictureBox)profile.Instance.Controls["picturebox"];
+            var image = ProfileImageStore.Load(username);
+            pictureBox.BackgroundImage = image;
+            pictureBox.BackgroundImageLayout = ImageLayout.Stretch;
+
+            var addButton = (Button)profile.Instance.Controls["btnadd"];
+            var saveButton = (Button)profile.Instance.Controls["btnsave"];
+            bool hasImage = image != null;
+            addButton.Visible = !hasImage;
+            saveButton.Visible = !hasImage;
+            saveButton.Enabled = false;
         }
 
     }

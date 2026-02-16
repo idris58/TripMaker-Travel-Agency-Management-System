@@ -109,17 +109,24 @@ namespace TripMaker
                         cmd.ExecuteNonQuery();
                     }
 
-                    // Step 3: Update Customer basic info and image
-                    string updateCustomer = @"UPDATE Customer SET Name = :name, Email = :email, Phone = :phone, Gender = :gender, Profile_Image = :image WHERE C_Username = :username";
+                    // Step 3: Update Customer basic info
+                    string updateCustomer = @"UPDATE Customer SET Name = :name, Email = :email, Phone = :phone, Gender = :gender WHERE C_Username = :username";
                     using (var cmd = new OracleCommand(updateCustomer, con))
                     {
+                        cmd.BindByName = true;
                         cmd.Parameters.Add(":name", OracleDbType.Varchar2).Value = name;
                         cmd.Parameters.Add(":email", OracleDbType.Varchar2).Value = email;
                         cmd.Parameters.Add(":phone", OracleDbType.Varchar2).Value = pn;
                         cmd.Parameters.Add(":gender", OracleDbType.Varchar2).Value = gender;
-                        cmd.Parameters.Add(":image", OracleDbType.Blob).Value = convertImageToBytes(ResizeImage(picturebox.Image, 256, 256));
                         cmd.Parameters.Add(":username", OracleDbType.Varchar2).Value = username;
                         cmd.ExecuteNonQuery();
+                    }
+
+                    // Step 4: Save profile image locally to avoid Oracle BLOB read issues.
+                    var resizedImage = ResizeImage(picturebox.Image, 256, 256);
+                    if (resizedImage != null)
+                    {
+                        ProfileImageStore.Save(username, resizedImage);
                     }
                     MessageBox.Show("Profile successfully updated.");
                 }

@@ -27,16 +27,17 @@ namespace TripMaker
             {
                 Image original = Image.FromFile(open.FileName);
                 btnsave.Enabled = true;
+                btnsave.Visible = true;
                 picturebox.Image = ResizeImage(original, 256, 256); // Resize to limit size
+                btnadd.Visible = false;
             }
-            btnadd.Visible = false;
         }
 
         private void btnsave_Click(object sender, EventArgs e)
         {
             try
             {
-                SaveImageToDatabase(Session.LoggedInUsername, picturebox.Image);
+                SaveImageLocally(Session.LoggedInUsername, picturebox.Image);
                 MessageBox.Show("Picture successfully added");
                 btnsave.Visible = false;
             }
@@ -48,26 +49,13 @@ namespace TripMaker
 
         private string username;
 
-        private void SaveImageToDatabase(string username, Image image)
+        private void SaveImageLocally(string username, Image image)
         {
-            try
+            if (image == null)
             {
-                using (var con = new OracleConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString))
-                {
-                    con.Open();
-                    string query = "UPDATE Customer SET Profile_Image = :image WHERE C_Username = :username";
-                    using (var cmd = new OracleCommand(query, con))
-                    {
-                        cmd.Parameters.Add(":image", OracleDbType.Blob).Value = ConvertImageToBytes(image);
-                        cmd.Parameters.Add(":username", OracleDbType.Varchar2).Value = username;
-                        cmd.ExecuteNonQuery();
-                    }
-                }
+                throw new Exception("No image selected.");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Image Save Error: " + ex.Message);
-            }
+            ProfileImageStore.Save(username, image);
         }
 
         private byte[] ConvertImageToBytes(Image img)
@@ -102,7 +90,7 @@ namespace TripMaker
             try
             {
                 string query = @"
-                  SELECT c.Name, c.C_Username, c.Email, c.Phone, c.Gender, c.Profile_Image,
+                  SELECT c.Name, c.C_Username, c.Email, c.Phone, c.Gender,
                   a.Street, a.City, a.Country
                   FROM Customer c
                   LEFT JOIN Address a ON c.A_ID = a.A_ID
@@ -138,15 +126,7 @@ namespace TripMaker
 
                     string fullAddress = $"{row["Street"]}, {row["City"]}, {row["Country"]}";
                     Profileedit.Instance.Controls["richTxtAdrs"].Text = fullAddress;
-
-                    if (row["Profile_Image"] != DBNull.Value)
-                    {
-                        byte[] imageBytes = (byte[])row["Profile_Image"];
-                        using (MemoryStream ms = new MemoryStream(imageBytes))
-                        {
-                            ((PictureBox)Profileedit.Instance.Controls["picturebox"]).Image = new Bitmap(Image.FromStream(ms));
-                        }
-                    }
+                    LoadProfileImageForEdit(Session.LoggedInUsername);
                 }
 
                 Profileedit.Instance.BringToFront();
@@ -155,6 +135,12 @@ namespace TripMaker
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void LoadProfileImageForEdit(string username)
+        {
+            var pictureBox = (PictureBox)Profileedit.Instance.Controls["picturebox"];
+            pictureBox.Image = ProfileImageStore.Load(username);
         }
 
         // Utility method to resize images before saving

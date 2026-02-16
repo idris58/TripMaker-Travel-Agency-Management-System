@@ -175,6 +175,7 @@
       <DependentUpon>Busconfirmbook.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
+    <Compile Include="ProfileImageStore.cs" />
     <Compile Include="Flight.cs">
       <SubType>UserControl</SubType>
     </Compile>

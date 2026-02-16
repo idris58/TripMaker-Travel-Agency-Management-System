@@ -52,6 +52,8 @@ namespace TripMaker
                     using (OracleCommand cmd = new OracleCommand(query, con))
                     {
                         cmd.BindByName = true; // Fix parameter binding
+                        cmd.InitialLOBFetchSize = -1;
+                        cmd.InitialLONGFetchSize = -1;
                         if (parameters != null)
                         {
                             cmd.Parameters.AddRange(parameters);
