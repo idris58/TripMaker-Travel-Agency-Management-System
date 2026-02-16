@@ -10,6 +10,7 @@ namespace TripMaker
         public ManegerBus()
         {
             InitializeComponent();
+            this.FormClosing += AdminForm_FormClosing;
         }
 
         private void loadgrid()
@@ -234,6 +235,14 @@ namespace TripMaker
         private void btnNew_Click(object sender, EventArgs e)
         {
             btnSave_Click(sender, e);
+        }
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
+            }
         }
 
     }

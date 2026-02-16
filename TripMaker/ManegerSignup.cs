@@ -14,6 +14,7 @@ namespace TripMaker
         {
             InitializeComponent();
             LoadUsers();
+            this.FormClosing += AdminForm_FormClosing;
         }
 
         private void btnAddAdmin_Click(object sender, EventArgs e)
@@ -257,6 +258,14 @@ namespace TripMaker
         {
             txtAName.Text = txtAUName.Text = txtAPass.Text = txtAemail.Text = "";
             rdbAMale.Checked = rdbAFemale.Checked = false;
+        }
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
+            }
         }
 
     }

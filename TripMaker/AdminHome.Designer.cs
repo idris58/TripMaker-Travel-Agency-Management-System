@@ -37,6 +37,7 @@ namespace TripMaker
             this.btnManageBus = new System.Windows.Forms.Button();
             this.btnHotelRooms = new System.Windows.Forms.Button();
             this.btnManageHotels = new System.Windows.Forms.Button();
+            this.btnAnalytics = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -167,11 +168,27 @@ namespace TripMaker
             this.btnManageHotels.UseVisualStyleBackColor = true;
             this.btnManageHotels.Click += new System.EventHandler(this.btnManageHotels_Click);
             // 
+            // btnAnalytics
+            // 
+            this.btnAnalytics.FlatAppearance.BorderSize = 0;
+            this.btnAnalytics.Font = new System.Drawing.Font("Century", 14F);
+            this.btnAnalytics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnalytics.Location = new System.Drawing.Point(309, 548);
+            this.btnAnalytics.Name = "btnAnalytics";
+            this.btnAnalytics.Padding = new System.Windows.Forms.Padding(4);
+            this.btnAnalytics.Size = new System.Drawing.Size(282, 41);
+            this.btnAnalytics.TabIndex = 26;
+            this.btnAnalytics.Text = "        Analytics Dashboard";
+            this.btnAnalytics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnalytics.UseVisualStyleBackColor = true;
+            this.btnAnalytics.Click += new System.EventHandler(this.btnAnalytics_Click);
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 640);
+            this.Controls.Add(this.btnAnalytics);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnManageActivity);
             this.Controls.Add(this.btnManageTrain);
@@ -197,5 +214,6 @@ namespace TripMaker
         private System.Windows.Forms.Button btnManageTrain;
         private System.Windows.Forms.Button btnManageActivity;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnAnalytics;
     }
 }

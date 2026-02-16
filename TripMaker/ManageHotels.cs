@@ -11,6 +11,7 @@ namespace TripMaker
         public ManageHotels()
         {
             InitializeComponent();
+            this.FormClosing += AdminForm_FormClosing;
         }
         private void ManageHotels_Load(object sender, EventArgs e)
         {
@@ -208,6 +209,14 @@ namespace TripMaker
             txtId.Text = "";
             txtHotelName.Text = "";
             txtLocation.Text = "";
+        }
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
+            }
         }
 
 

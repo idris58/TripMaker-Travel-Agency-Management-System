@@ -138,6 +138,10 @@
     <Compile Include="AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminAnalyticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAnalyticsService.cs" />
     <Compile Include="AirportManagerView.cs">
       <SubType>Form</SubType>
     </Compile>

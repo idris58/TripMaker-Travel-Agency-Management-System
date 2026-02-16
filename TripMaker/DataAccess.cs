@@ -100,6 +100,32 @@ namespace TripMaker
                 return null;
             }
         }
+
+        public static object GetSingleValueParameterized(string query, OracleParameter[] parameters, out string error)
+        {
+            error = "";
+            try
+            {
+                using (var con = new OracleConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString))
+                {
+                    con.Open();
+                    using (var cmd = new OracleCommand(query, con))
+                    {
+                        cmd.BindByName = true;
+                        if (parameters != null)
+                        {
+                            cmd.Parameters.AddRange(parameters);
+                        }
+                        return cmd.ExecuteScalar();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                error = ex.Message;
+                return null;
+            }
+        }
     }
 
 }

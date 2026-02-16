@@ -15,6 +15,7 @@ namespace TripMaker
         public AdminHome()
         {
             InitializeComponent();
+            this.FormClosing += AdminHome_FormClosing;
         }
 
 
@@ -79,6 +80,21 @@ namespace TripMaker
             this.Hide();
             ManegerActivity obj = new ManegerActivity();
             obj.Show();
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminAnalyticsForm obj = new AdminAnalyticsForm(this);
+            obj.Show();
+        }
+
+        private void AdminHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
+            }
         }
 
     }

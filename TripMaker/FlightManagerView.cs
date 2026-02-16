@@ -15,6 +15,7 @@ namespace TripMaker
         public FlightManagerView()
         {
             InitializeComponent();
+            this.FormClosing += AdminForm_FormClosing;
         }
         private void loadgrid()
         {
@@ -236,6 +237,14 @@ namespace TripMaker
             this.Hide();
             AdminHome obj = new AdminHome();
             obj.Show();
+        }
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
+            }
         }
 
         
