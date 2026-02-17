@@ -1,5 +1,4 @@
 using System;
-using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -43,51 +42,6 @@ namespace TripMaker
                 _exitRequested = true;
                 Application.Exit();
             }
-        }
-
-        private static Label CreateSummaryLabel(string text)
-        {
-            return new Label
-            {
-                AutoSize = false,
-                Width = 280,
-                Height = 52,
-                Margin = new Padding(0, 0, 16, 0),
-                TextAlign = ContentAlignment.MiddleLeft,
-                Text = text,
-                Font = new Font("Segoe UI", 11f, FontStyle.Bold),
-                BorderStyle = BorderStyle.FixedSingle,
-                BackColor = Color.White
-            };
-        }
-
-        private static DataGridView CreateGrid()
-        {
-            return new DataGridView
-            {
-                Dock = DockStyle.Fill,
-                ReadOnly = true,
-                AllowUserToAddRows = false,
-                AllowUserToDeleteRows = false,
-                AllowUserToResizeRows = false,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
-                SelectionMode = DataGridViewSelectionMode.FullRowSelect,
-                MultiSelect = false,
-                RowHeadersVisible = false,
-                BackgroundColor = Color.White
-            };
-        }
-
-        private static GroupBox WrapGrid(string title, Control grid)
-        {
-            var group = new GroupBox
-            {
-                Text = title,
-                Dock = DockStyle.Fill,
-                Font = new Font("Segoe UI", 9f, FontStyle.Bold)
-            };
-            group.Controls.Add(grid);
-            return group;
         }
 
         private void LoadAnalytics()
