@@ -98,6 +98,7 @@ namespace TripMaker
 
         private static void PrepareHostedForm(Form form)
         {
+            DisableMetroShadowForHostedForm(form);
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
@@ -105,6 +106,33 @@ namespace TripMaker
             form.MaximizeBox = false;
             form.MinimizeBox = false;
             HideBackButtons(form.Controls);
+        }
+
+        private static void DisableMetroShadowForHostedForm(Form form)
+        {
+            // MetroFramework forms create a top-level shadow window by default.
+            // Hosted forms are not top-level, so force shadow off to prevent owner exceptions.
+            var shadowProperty = form.GetType().GetProperty("ShadowType");
+            if (shadowProperty == null || !shadowProperty.CanWrite)
+            {
+                return;
+            }
+
+            var enumType = shadowProperty.PropertyType;
+            if (!enumType.IsEnum)
+            {
+                return;
+            }
+
+            foreach (string enumName in Enum.GetNames(enumType))
+            {
+                if (string.Equals(enumName, "None", StringComparison.OrdinalIgnoreCase))
+                {
+                    object noneValue = Enum.Parse(enumType, enumName);
+                    shadowProperty.SetValue(form, noneValue, null);
+                    return;
+                }
+            }
         }
 
         private static void HideBackButtons(Control.ControlCollection controls)
