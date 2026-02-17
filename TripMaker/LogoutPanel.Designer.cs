@@ -38,14 +38,16 @@ namespace TripMaker
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(603, 44);
+            this.btnLogout.Font = new System.Drawing.Font("Century", 10F);
+            this.btnLogout.Image = global::TripMaker.Properties.Resources.Logout;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(577, 44);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(65, 37);
+            this.btnLogout.Size = new System.Drawing.Size(95, 37);
             this.btnLogout.TabIndex = 21;
             this.btnLogout.Text = "Logout";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -54,14 +56,16 @@ namespace TripMaker
             this.btnProfile.FlatAppearance.BorderSize = 0;
             this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnProfile.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Location = new System.Drawing.Point(526, 44);
+            this.btnProfile.Font = new System.Drawing.Font("Century", 10F);
+            this.btnProfile.Image = global::TripMaker.Properties.Resources.profile;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(480, 44);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(65, 37);
+            this.btnProfile.Size = new System.Drawing.Size(90, 37);
             this.btnProfile.TabIndex = 22;
             this.btnProfile.Text = "Profile";
+            this.btnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
