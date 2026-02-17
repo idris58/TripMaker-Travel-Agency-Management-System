@@ -9,6 +9,10 @@ namespace TripMaker
         private readonly Form _parent;
         private bool _exitRequested;
 
+        public AdminAnalyticsForm() : this(null)
+        {
+        }
+
         public AdminAnalyticsForm(Form parent)
         {
             _parent = parent;

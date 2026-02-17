@@ -245,7 +245,7 @@ namespace TripMaker
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new AdminHome().Show();
+            new AdminMainForm().Show();
         }
 
         private void ClearCustomerFields()

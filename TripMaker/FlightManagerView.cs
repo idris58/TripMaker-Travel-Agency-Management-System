@@ -235,7 +235,7 @@ namespace TripMaker
         private void Back_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            AdminHome obj = new AdminHome();
+            AdminMainForm obj = new AdminMainForm();
             obj.Show();
         }
 

@@ -103,7 +103,7 @@ namespace TripMaker
                             ClearData();
                             Session.LoggedInUsername = un;
                             Session.IsAdmin = true;
-                            AdminHome obj = new AdminHome();
+                            AdminMainForm obj = new AdminMainForm();
                             LogoutPanel.Instance.BringToFront();
                             ParentForm.Hide();
                             obj.Show();
