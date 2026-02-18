@@ -13,25 +13,26 @@ namespace TripMaker
         public AdminMainForm()
         {
             InitializeComponent();
-            ConfigureSidebarButtons();
+            ConfigureButtonStyles();
+            Resize += AdminMainForm_Resize;
             FormClosing += AdminMainForm_FormClosing;
+            UpdateMaximizeButtonImage();
             ShowDashboard();
         }
 
-        private void ConfigureSidebarButtons()
+        private void ConfigureButtonStyles()
         {
-            Color navBackColor = panelSidebar.BackColor;
-            Button[] navButtons =
-            {
-                btnUsers, btnHotels, btnRooms, btnBus, btnTrain, btnFlight, btnActivity, btnAnalytics
-            };
+            btnClose.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 0, 0);
+            btnClose.FlatAppearance.MouseDownBackColor = Color.FromArgb(128, 0, 0);
+            btnClose.TabStop = false;
 
-            foreach (var btn in navButtons)
-            {
-                btn.FlatAppearance.MouseOverBackColor = navBackColor;
-                btn.FlatAppearance.MouseDownBackColor = navBackColor;
-                btn.TabStop = false;
-            }
+            btnMaximize.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            btnMaximize.FlatAppearance.MouseDownBackColor = Color.FromArgb(48, 48, 48);
+            btnMaximize.TabStop = false;
+
+            btnMinimize.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 64, 64);
+            btnMinimize.FlatAppearance.MouseDownBackColor = Color.FromArgb(48, 48, 48);
+            btnMinimize.TabStop = false;
         }
 
         private void btnNav_Click(object sender, EventArgs e)
@@ -157,6 +158,7 @@ namespace TripMaker
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            ActiveControl = null;
             _logoutNavigating = true;
             Session.Logout();
             Form1 form1 = new Form1();
@@ -166,7 +168,35 @@ namespace TripMaker
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            ActiveControl = null;
             Close();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            ActiveControl = null;
+            WindowState = WindowState == FormWindowState.Maximized
+                ? FormWindowState.Normal
+                : FormWindowState.Maximized;
+            UpdateMaximizeButtonImage();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            ActiveControl = null;
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void AdminMainForm_Resize(object sender, EventArgs e)
+        {
+            UpdateMaximizeButtonImage();
+        }
+
+        private void UpdateMaximizeButtonImage()
+        {
+            btnMaximize.Image = WindowState == FormWindowState.Maximized
+                ? Properties.Resources.maximize_after
+                : Properties.Resources.maximize_before;
         }
 
         private void AdminMainForm_FormClosing(object sender, FormClosingEventArgs e)

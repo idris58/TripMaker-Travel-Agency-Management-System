@@ -25,6 +25,8 @@ namespace TripMaker
         {
             InitializeComponent();
             ConfigureSidebarButtons();
+            Resize += Form1_Resize;
+            UpdateMaximizeButtonImage();
         }
 
         
@@ -206,6 +208,31 @@ namespace TripMaker
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            WindowState = WindowState == FormWindowState.Maximized
+                ? FormWindowState.Normal
+                : FormWindowState.Maximized;
+            UpdateMaximizeButtonImage();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            UpdateMaximizeButtonImage();
+        }
+
+        private void UpdateMaximizeButtonImage()
+        {
+            btnMaximize.BackgroundImage = WindowState == FormWindowState.Maximized
+                ? Properties.Resources.maximize_after
+                : Properties.Resources.maximize_before;
         }
     }
 }

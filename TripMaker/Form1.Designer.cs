@@ -33,25 +33,27 @@ namespace TripMaker
             this.lblLogo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlActivity = new System.Windows.Forms.Panel();
+            this.btnActivity = new System.Windows.Forms.Button();
             this.pnlTrain = new System.Windows.Forms.Panel();
+            this.btnTrain = new System.Windows.Forms.Button();
             this.pnlAbout = new System.Windows.Forms.Panel();
             this.pnlWallet = new System.Windows.Forms.Panel();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.pnlHotel = new System.Windows.Forms.Panel();
             this.pnlFlight = new System.Windows.Forms.Panel();
+            this.btnBookingInfo = new System.Windows.Forms.Button();
+            this.btnHotel = new System.Windows.Forms.Button();
             this.pnlBus = new System.Windows.Forms.Panel();
+            this.btnFlight = new System.Windows.Forms.Button();
             this.pnlHome = new System.Windows.Forms.Panel();
+            this.btnBus = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panelUp = new System.Windows.Forms.Panel();
             this.panel = new System.Windows.Forms.Panel();
             this.pnlControl = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnActivity = new System.Windows.Forms.Button();
-            this.btnTrain = new System.Windows.Forms.Button();
-            this.btnAbout = new System.Windows.Forms.Button();
-            this.btnBookingInfo = new System.Windows.Forms.Button();
-            this.btnHotel = new System.Windows.Forms.Button();
-            this.btnFlight = new System.Windows.Forms.Button();
-            this.btnBus = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlControl.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +108,23 @@ namespace TripMaker
             this.pnlActivity.TabIndex = 13;
             this.pnlActivity.Visible = false;
             // 
+            // btnActivity
+            // 
+            this.btnActivity.FlatAppearance.BorderSize = 0;
+            this.btnActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActivity.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActivity.ForeColor = System.Drawing.Color.White;
+            this.btnActivity.Image = ((System.Drawing.Image)(resources.GetObject("btnActivity.Image")));
+            this.btnActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActivity.Location = new System.Drawing.Point(15, 429);
+            this.btnActivity.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActivity.Name = "btnActivity";
+            this.btnActivity.Size = new System.Drawing.Size(177, 49);
+            this.btnActivity.TabIndex = 14;
+            this.btnActivity.Text = "Activity";
+            this.btnActivity.UseVisualStyleBackColor = true;
+            this.btnActivity.Click += new System.EventHandler(this.btn_function);
+            // 
             // pnlTrain
             // 
             this.pnlTrain.BackColor = System.Drawing.Color.Red;
@@ -115,6 +134,23 @@ namespace TripMaker
             this.pnlTrain.Size = new System.Drawing.Size(14, 49);
             this.pnlTrain.TabIndex = 11;
             this.pnlTrain.Visible = false;
+            // 
+            // btnTrain
+            // 
+            this.btnTrain.FlatAppearance.BorderSize = 0;
+            this.btnTrain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrain.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrain.ForeColor = System.Drawing.Color.White;
+            this.btnTrain.Image = ((System.Drawing.Image)(resources.GetObject("btnTrain.Image")));
+            this.btnTrain.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTrain.Location = new System.Drawing.Point(16, 305);
+            this.btnTrain.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTrain.Name = "btnTrain";
+            this.btnTrain.Size = new System.Drawing.Size(177, 49);
+            this.btnTrain.TabIndex = 12;
+            this.btnTrain.Text = "Train";
+            this.btnTrain.UseVisualStyleBackColor = true;
+            this.btnTrain.Click += new System.EventHandler(this.btn_function);
             // 
             // pnlAbout
             // 
@@ -136,6 +172,23 @@ namespace TripMaker
             this.pnlWallet.TabIndex = 6;
             this.pnlWallet.Visible = false;
             // 
+            // btnAbout
+            // 
+            this.btnAbout.FlatAppearance.BorderSize = 0;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.ForeColor = System.Drawing.Color.White;
+            this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
+            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.Location = new System.Drawing.Point(15, 544);
+            this.btnAbout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(177, 49);
+            this.btnAbout.TabIndex = 10;
+            this.btnAbout.Text = "About";
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btn_function);
+            // 
             // pnlHotel
             // 
             this.pnlHotel.BackColor = System.Drawing.Color.Red;
@@ -155,119 +208,6 @@ namespace TripMaker
             this.pnlFlight.Size = new System.Drawing.Size(14, 49);
             this.pnlFlight.TabIndex = 4;
             this.pnlFlight.Visible = false;
-            // 
-            // pnlBus
-            // 
-            this.pnlBus.BackColor = System.Drawing.Color.Red;
-            this.pnlBus.Location = new System.Drawing.Point(1, 185);
-            this.pnlBus.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlBus.Name = "pnlBus";
-            this.pnlBus.Size = new System.Drawing.Size(14, 49);
-            this.pnlBus.TabIndex = 4;
-            this.pnlBus.Visible = false;
-            // 
-            // pnlHome
-            // 
-            this.pnlHome.BackColor = System.Drawing.Color.Red;
-            this.pnlHome.Location = new System.Drawing.Point(1, 121);
-            this.pnlHome.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlHome.Name = "pnlHome";
-            this.pnlHome.Size = new System.Drawing.Size(14, 49);
-            this.pnlHome.TabIndex = 3;
-            // 
-            // panelUp
-            // 
-            this.panelUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            this.panelUp.Location = new System.Drawing.Point(199, 35);
-            this.panelUp.Margin = new System.Windows.Forms.Padding(2);
-            this.panelUp.Name = "panelUp";
-            this.panelUp.Size = new System.Drawing.Size(701, 113);
-            this.panelUp.TabIndex = 9;
-            // 
-            // panel
-            // 
-            this.panel.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel.Location = new System.Drawing.Point(199, 148);
-            this.panel.Margin = new System.Windows.Forms.Padding(2);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(701, 530);
-            this.panel.TabIndex = 8;
-            // 
-            // pnlControl
-            // 
-            this.pnlControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.pnlControl.Controls.Add(this.btnClose);
-            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlControl.Location = new System.Drawing.Point(199, 0);
-            this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(701, 35);
-            this.pnlControl.TabIndex = 21;
-            this.pnlControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlControl_MouseDown);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackgroundImage = global::TripMaker.Properties.Resources.CloseB;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(663, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(38, 35);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnActivity
-            // 
-            this.btnActivity.FlatAppearance.BorderSize = 0;
-            this.btnActivity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActivity.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActivity.ForeColor = System.Drawing.Color.White;
-            this.btnActivity.Image = ((System.Drawing.Image)(resources.GetObject("btnActivity.Image")));
-            this.btnActivity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActivity.Location = new System.Drawing.Point(15, 429);
-            this.btnActivity.Margin = new System.Windows.Forms.Padding(2);
-            this.btnActivity.Name = "btnActivity";
-            this.btnActivity.Size = new System.Drawing.Size(177, 49);
-            this.btnActivity.TabIndex = 14;
-            this.btnActivity.Text = "Activity";
-            this.btnActivity.UseVisualStyleBackColor = true;
-            this.btnActivity.Click += new System.EventHandler(this.btn_function);
-            // 
-            // btnTrain
-            // 
-            this.btnTrain.FlatAppearance.BorderSize = 0;
-            this.btnTrain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrain.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrain.ForeColor = System.Drawing.Color.White;
-            this.btnTrain.Image = ((System.Drawing.Image)(resources.GetObject("btnTrain.Image")));
-            this.btnTrain.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrain.Location = new System.Drawing.Point(16, 305);
-            this.btnTrain.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTrain.Name = "btnTrain";
-            this.btnTrain.Size = new System.Drawing.Size(177, 49);
-            this.btnTrain.TabIndex = 12;
-            this.btnTrain.Text = "Train";
-            this.btnTrain.UseVisualStyleBackColor = true;
-            this.btnTrain.Click += new System.EventHandler(this.btn_function);
-            // 
-            // btnAbout
-            // 
-            this.btnAbout.FlatAppearance.BorderSize = 0;
-            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbout.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.ForeColor = System.Drawing.Color.White;
-            this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
-            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(15, 544);
-            this.btnAbout.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(177, 49);
-            this.btnAbout.TabIndex = 10;
-            this.btnAbout.Text = "About";
-            this.btnAbout.UseVisualStyleBackColor = true;
-            this.btnAbout.Click += new System.EventHandler(this.btn_function);
             // 
             // btnBookingInfo
             // 
@@ -303,6 +243,16 @@ namespace TripMaker
             this.btnHotel.UseVisualStyleBackColor = true;
             this.btnHotel.Click += new System.EventHandler(this.btn_function);
             // 
+            // pnlBus
+            // 
+            this.pnlBus.BackColor = System.Drawing.Color.Red;
+            this.pnlBus.Location = new System.Drawing.Point(1, 185);
+            this.pnlBus.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlBus.Name = "pnlBus";
+            this.pnlBus.Size = new System.Drawing.Size(14, 49);
+            this.pnlBus.TabIndex = 4;
+            this.pnlBus.Visible = false;
+            // 
             // btnFlight
             // 
             this.btnFlight.FlatAppearance.BorderSize = 0;
@@ -319,6 +269,15 @@ namespace TripMaker
             this.btnFlight.Text = "Flight";
             this.btnFlight.UseVisualStyleBackColor = true;
             this.btnFlight.Click += new System.EventHandler(this.btn_function);
+            // 
+            // pnlHome
+            // 
+            this.pnlHome.BackColor = System.Drawing.Color.Red;
+            this.pnlHome.Location = new System.Drawing.Point(1, 121);
+            this.pnlHome.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlHome.Name = "pnlHome";
+            this.pnlHome.Size = new System.Drawing.Size(14, 49);
+            this.pnlHome.TabIndex = 3;
             // 
             // btnBus
             // 
@@ -354,6 +313,90 @@ namespace TripMaker
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btn_function);
             // 
+            // panelUp
+            // 
+            this.panelUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            this.panelUp.Location = new System.Drawing.Point(199, 35);
+            this.panelUp.Margin = new System.Windows.Forms.Padding(2);
+            this.panelUp.Name = "panelUp";
+            this.panelUp.Size = new System.Drawing.Size(701, 113);
+            this.panelUp.TabIndex = 9;
+            // 
+            // panel
+            // 
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel.Location = new System.Drawing.Point(199, 148);
+            this.panel.Margin = new System.Windows.Forms.Padding(2);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(701, 530);
+            this.panel.TabIndex = 8;
+            // 
+            // pnlControl
+            // 
+            this.pnlControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.pnlControl.Controls.Add(this.btnMinimize);
+            this.pnlControl.Controls.Add(this.btnMaximize);
+            this.pnlControl.Controls.Add(this.btnClose);
+            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlControl.Location = new System.Drawing.Point(199, 0);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Size = new System.Drawing.Size(701, 35);
+            this.pnlControl.TabIndex = 21;
+            this.pnlControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlControl_MouseDown);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackgroundImage = global::TripMaker.Properties.Resources.minimize;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Location = new System.Drawing.Point(587, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(38, 35);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.BackgroundImage = global::TripMaker.Properties.Resources.maximize_before;
+            this.btnMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMaximize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.Location = new System.Drawing.Point(625, 0);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(38, 35);
+            this.btnMaximize.TabIndex = 1;
+            this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackgroundImage = global::TripMaker.Properties.Resources.CloseB;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(663, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 35);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,6 +409,7 @@ namespace TripMaker
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(900, 678);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -400,6 +444,8 @@ namespace TripMaker
         private System.Windows.Forms.Panel pnlActivity;
         private System.Windows.Forms.Button btnActivity;
         public System.Windows.Forms.Panel pnlControl;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnClose;
     }
 }
