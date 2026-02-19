@@ -161,8 +161,8 @@ namespace TripMaker
             ActiveControl = null;
             _logoutNavigating = true;
             Session.Logout();
-            Form1 form1 = new Form1();
-            form1.Show();
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
             Close();
         }
 

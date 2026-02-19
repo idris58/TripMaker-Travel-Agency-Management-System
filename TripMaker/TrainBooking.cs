@@ -15,6 +15,25 @@ namespace TripMaker
         public TrainBooking()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int delta = Math.Max(0, ClientSize.Width - 674);
+
+            Lblname.Left = Math.Max(180, (ClientSize.Width - Lblname.Width) / 2);
+            aa.Left = 353 + delta;
+            aaa.Left = 488 + delta;
+            label1.Left = 605 + delta;
+            lbldepT.Left = 370 + delta;
+            lblarvT.Left = 497 + delta;
+            lblprice.Left = 600 + delta;
+            btnbook.Left = 585 + delta;
+
+            panel1.Left = 63;
+            panel1.Width = Math.Max(551, 551 + delta);
         }
 
         private string trainName, start, ending, depTime, arrTime, price, ttype;

@@ -17,6 +17,8 @@ namespace TripMaker
         public profile()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            ApplyResponsiveLayout();
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -159,6 +161,20 @@ namespace TripMaker
                 g.DrawImage(image, 0, 0, newWidth, newHeight);
             }
             return newImage;
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int h = ClientSize.Height;
+
+            int rightMargin = 40;
+            picturebox.Left = Math.Max(300, w - picturebox.Width - rightMargin);
+            btnadd.Left = picturebox.Left + ((picturebox.Width - btnadd.Width) / 2);
+            btnsave.Left = btnadd.Left;
+
+            btnup.Top = Math.Max(430, h - btnup.Height - 25);
+            btnup.Left = Math.Max(320, w - btnup.Width - rightMargin);
         }
     }
 }

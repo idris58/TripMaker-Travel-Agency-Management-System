@@ -19,6 +19,7 @@ namespace TripMaker
         public Flightconfirmbook()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
         }
 
         private string airlinename,Date, dateTimePicker, deptime, landtime, Price;
@@ -36,6 +37,28 @@ namespace TripMaker
         public void flightconfirmbook_Load()
         {
             GenerateSeatLabels();
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int h = ClientSize.Height;
+            int shift = Math.Max(0, (w - 701) / 2);
+
+            panel.Width = w;
+            panel3.Left = shift + 2;
+            label2.Left = shift + 48;
+            pnlSeatNo.Left = shift + 21;
+            label3.Left = shift + 317;
+            cmbNumber.Left = shift + 313;
+            gbPaymentMethods.Left = shift + 488;
+            btnBack.Left = shift + 313;
+            btnConfirm.Left = shift + 392;
+
+            label4.Left = Math.Max(0, (panel.Width - label4.Width) / 2);
+            panel3.Width = Math.Min(697, Math.Max(620, w - (shift * 2) - 4));
+            pnlSeatNo.Height = Math.Max(228, h - pnlSeatNo.Top - 8);
         }
 
         private void btnBack_Click(object sender, EventArgs e)

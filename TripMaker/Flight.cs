@@ -25,6 +25,8 @@ namespace TripMaker
         public Flight()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            flowFlightPanel.Resize += (s, e) => ResizeBookingCards();
         }
 
         private void Flight_Load(object sender, EventArgs e)
@@ -58,6 +60,7 @@ namespace TripMaker
             {
                 MessageBox.Show("Exception during loading stations: " + ex.Message);
             }
+            ApplyResponsiveLayout();
         }
 
 
@@ -123,10 +126,49 @@ namespace TripMaker
                     flowFlightPanel.Controls.Add(flightCards[i]);
                     panel.Visible = true;
                 }
+                ResizeBookingCards();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Search failed: " + ex.Message);
+            }
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int h = ClientSize.Height;
+            int shift = Math.Max(0, (w - 701) / 2);
+
+            label5.Left = shift + ((701 - label5.Width) / 2);
+
+            label3.Left = shift + 78;
+            cbFromAirport.Left = shift + 82;
+
+            label4.Left = shift + 233;
+            cbToAirport.Left = shift + 277;
+
+            DateLbl.Left = shift + 459;
+            dtbjourney.Left = shift + 462;
+            btnSearch.Left = shift + 577;
+
+            panel.Left = 0;
+            panel.Width = w;
+
+            flowFlightPanel.Width = w;
+            flowFlightPanel.Height = Math.Max(0, h - flowFlightPanel.Top);
+            ResizeBookingCards();
+        }
+
+        private void ResizeBookingCards()
+        {
+            int cardWidth = Math.Max(701, flowFlightPanel.ClientSize.Width - 20);
+            foreach (Control control in flowFlightPanel.Controls)
+            {
+                if (control is sub_Flight)
+                {
+                    control.Width = cardWidth;
+                }
             }
         }
 

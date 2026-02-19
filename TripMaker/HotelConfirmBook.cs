@@ -19,6 +19,9 @@ namespace TripMaker
         public HotelConfirmBook()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            VisibleChanged += (s, e) => { if (Visible) ApplyResponsiveLayout(); };
+            flowLayoutPanelRooms.Resize += (s, e) => ResizeRoomSummaryCards();
         }
 
         public void SetRoomSelection(List<Sub_RoomInfo> rooms, string hotel)
@@ -48,6 +51,46 @@ namespace TripMaker
             radioRocket.Checked = false;
             radioUpay.Checked = false;
             cmbNumber.SelectedIndex = -1;
+            ResizeRoomSummaryCards();
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int h = ClientSize.Height;
+            int shift = Math.Max(0, (w - 701) / 2);
+
+            panel.Width = w;
+            lblDate.Left = Math.Max(0, (panel.Width - lblDate.Width) / 2);
+
+            flowLayoutPanelRooms.Left = 0;
+            flowLayoutPanelRooms.Width = w;
+            flowLayoutPanelRooms.Height = Math.Max(179, h - 292);
+            ResizeRoomSummaryCards();
+
+            lblTotalPrice.Left = shift + 207;
+            label4.Left = shift + 207;
+            cmbNumber.Left = shift + 203;
+            gbPaymentMethods.Left = shift + 378;
+
+            int actionTop = Math.Max(368, h - 103);
+            btnBack.Left = shift + 201;
+            btnConfirm.Left = shift + 282;
+            btnBack.Top = actionTop;
+            btnConfirm.Top = actionTop;
+        }
+
+        private void ResizeRoomSummaryCards()
+        {
+            int cardWidth = Math.Max(698, flowLayoutPanelRooms.ClientSize.Width - 20);
+            foreach (Control control in flowLayoutPanelRooms.Controls)
+            {
+                if (control is Sub_RoomInfo)
+                {
+                    control.Width = cardWidth;
+                }
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

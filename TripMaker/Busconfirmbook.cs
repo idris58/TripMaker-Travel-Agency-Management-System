@@ -21,6 +21,7 @@ namespace TripMaker
         public Busconfirmbook()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
         }
         private List<string> bookedSeats = new List<string>();
 
@@ -71,7 +72,28 @@ namespace TripMaker
         public void busconfirmbook_Load()
         {
             GenerateSeatLabels();
-            // Intentionally left blank — any pre-loading logic can go here.
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int h = ClientSize.Height;
+            int shift = Math.Max(0, (w - 701) / 2);
+
+            panel.Width = w;
+            panel1.Left = shift + 2;
+            label4.Left = shift + 41;
+            pnlSeatNo.Left = shift + 14;
+            label1.Left = shift + 310;
+            cmbNumber.Left = shift + 306;
+            gbPaymentMethods.Left = shift + 481;
+            btnBack.Left = shift + 301;
+            btnConfirm.Left = shift + 385;
+
+            lblDate.Left = Math.Max(0, (panel.Width - lblDate.Width) / 2);
+            panel1.Width = Math.Min(697, Math.Max(620, w - (shift * 2) - 4));
+            pnlSeatNo.Height = Math.Max(239, h - pnlSeatNo.Top - 8);
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

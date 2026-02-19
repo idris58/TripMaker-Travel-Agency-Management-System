@@ -8,6 +8,20 @@ namespace TripMaker
         public Sub_RoomInfo()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int delta = Math.Max(0, ClientSize.Width - 698);
+
+            aaaa.Left = 533 + delta;
+            lblGuest.Left = 541 + delta;
+            lblPrice.Left = 609 + delta;
+
+            panel1.Left = 75;
+            panel1.Width = Math.Max(551, 551 + delta);
         }
 
         private string breakfast;

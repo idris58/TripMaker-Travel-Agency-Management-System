@@ -18,6 +18,8 @@ namespace TripMaker
         public ActivityConfirmBook()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            VisibleChanged += (s, e) => { if (Visible) ApplyResponsiveLayout(); };
         }
 
         private string name, price, location, category;
@@ -63,7 +65,22 @@ namespace TripMaker
 
         public void activityconfirmbook_Load()
         {
-            // no-op for now
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int shift = Math.Max(0, (w - 701) / 2);
+
+            panel.Width = w;
+            panel1.Left = shift + 1;
+            label3.Left = shift + 168;
+            cmbNumber.Left = shift + 169;
+            gbPaymentMethods.Left = shift + 370;
+            btnBack.Left = shift + 169;
+            btnConfirm.Left = shift + 252;
+            pp.Left = Math.Max(0, (panel.Width - pp.Width) / 2);
         }
 
         private void btnBack_Click(object sender, EventArgs e)

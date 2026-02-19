@@ -1,7 +1,7 @@
-﻿
+
 namespace TripMaker
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace TripMaker
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.lblLogo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlActivity = new System.Windows.Forms.Panel();
@@ -48,8 +48,8 @@ namespace TripMaker
             this.pnlHome = new System.Windows.Forms.Panel();
             this.btnBus = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.panelUp = new System.Windows.Forms.Panel();
             this.panel = new System.Windows.Forms.Panel();
+            this.panelUp = new System.Windows.Forms.Panel();
             this.pnlControl = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
@@ -313,28 +313,25 @@ namespace TripMaker
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btn_function);
             // 
-            // panelUp
-            // 
-            this.panelUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
-            this.panelUp.Location = new System.Drawing.Point(199, 35);
-            this.panelUp.Margin = new System.Windows.Forms.Padding(2);
-            this.panelUp.Name = "panelUp";
-            this.panelUp.Size = new System.Drawing.Size(701, 113);
-            this.panelUp.TabIndex = 9;
-            // 
             // panel
             // 
-            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel.Location = new System.Drawing.Point(199, 148);
             this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(701, 530);
             this.panel.TabIndex = 8;
+            // 
+            // panelUp
+            // 
+            this.panelUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(223)))), ((int)(((byte)(229)))));
+            this.panelUp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUp.Location = new System.Drawing.Point(199, 35);
+            this.panelUp.Margin = new System.Windows.Forms.Padding(2);
+            this.panelUp.Name = "panelUp";
+            this.panelUp.Size = new System.Drawing.Size(701, 113);
+            this.panelUp.TabIndex = 9;
             // 
             // pnlControl
             // 
@@ -397,23 +394,23 @@ namespace TripMaker
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(900, 678);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.panelUp);
             this.Controls.Add(this.pnlControl);
-            this.Controls.Add(this.panel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(900, 678);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlControl.ResumeLayout(false);

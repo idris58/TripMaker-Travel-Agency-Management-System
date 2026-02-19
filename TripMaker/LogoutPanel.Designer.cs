@@ -38,6 +38,7 @@ namespace TripMaker
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogout.Font = new System.Drawing.Font("Century", 10F);
             this.btnLogout.Image = global::TripMaker.Properties.Resources.Logout;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -56,6 +57,7 @@ namespace TripMaker
             this.btnProfile.FlatAppearance.BorderSize = 0;
             this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnProfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProfile.Font = new System.Drawing.Font("Century", 10F);
             this.btnProfile.Image = global::TripMaker.Properties.Resources.profile;
             this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -74,6 +76,7 @@ namespace TripMaker
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TripMaker.Properties.Resources.LoginLogoutBG;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.btnLogout);
             this.Margin = new System.Windows.Forms.Padding(2);

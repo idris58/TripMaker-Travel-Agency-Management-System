@@ -17,6 +17,28 @@ namespace TripMaker
         public Signup()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int h = ClientSize.Height;
+
+            const int leftWidth = 250;
+            const int rightWidth = 388;
+            const int blockGap = 0;
+            int totalWidth = leftWidth + blockGap + rightWidth;
+
+            int left = Math.Max(12, (w - totalWidth) / 2);
+            int top = Math.Max(15, (h - panel1.Height) / 2);
+
+            panel1.Left = left;
+            panel1.Top = top;
+
+            panel2.Left = left + leftWidth + blockGap;
+            panel2.Top = top;
         }
 
         private void password_change(object sender, EventArgs e)

@@ -22,6 +22,25 @@ namespace TripMaker
         public sub_Flight()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int delta = Math.Max(0, ClientSize.Width - 701);
+
+            lblAirlineName.Left = Math.Max(180, (ClientSize.Width - lblAirlineName.Width) / 2);
+            aa.Left = 306 + delta;
+            aaa.Left = 464 + delta;
+            label1.Left = 612 + delta;
+            lblDepTime.Left = 334 + delta;
+            lblLandTime.Left = 477 + delta;
+            lblPrice.Left = 603 + delta;
+            btnbook.Left = 615 + delta;
+
+            panel1.Left = 75;
+            panel1.Width = Math.Max(551, 551 + delta);
         }
 
         private string airLineName;

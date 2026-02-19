@@ -36,6 +36,8 @@ namespace TripMaker
         public HotelRoom()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            flowLayoutPanel1.Resize += (s, e) => ResizeRoomCards();
         }
 
         public void HotelRoom_Load()
@@ -103,6 +105,7 @@ namespace TripMaker
                     };
                     flowLayoutPanel1.Controls.Add(Sub_RoomInfo[i]);
                 }
+                ApplyResponsiveLayout();
             }
             catch (Exception ex)
             {
@@ -156,6 +159,28 @@ namespace TripMaker
         public void flowLayoutPanel_clear()
         {
             flowLayoutPanel1.Controls.Clear();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            panel.Width = w;
+            lblHotelName.Left = Math.Max(200, (w - lblHotelName.Width) / 2);
+            btnBack.Left = Math.Max(0, w - btnBack.Width - 20);
+            btnBook.Left = Math.Max(0, btnBack.Left - btnBook.Width - 12);
+            ResizeRoomCards();
+        }
+
+        private void ResizeRoomCards()
+        {
+            int cardWidth = Math.Max(698, flowLayoutPanel1.ClientSize.Width - 20);
+            foreach (Control control in flowLayoutPanel1.Controls)
+            {
+                if (control is Sub_RoomInfo)
+                {
+                    control.Width = cardWidth;
+                }
+            }
         }
     }
 }

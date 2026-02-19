@@ -25,6 +25,8 @@ namespace TripMaker
         public Train()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            flowLayoutPanel1.Resize += (s, e) => ResizeBookingCards();
         }
 
         private void Train_Load(object sender, EventArgs e)
@@ -56,6 +58,7 @@ namespace TripMaker
             {
                 MessageBox.Show("Exception during loading stations: " + ex.Message);
             }
+            ApplyResponsiveLayout();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -118,10 +121,51 @@ namespace TripMaker
                     flowLayoutPanel1.Controls.Add(operators[i]);
                     panel.Visible = true;
                 }
+                ResizeBookingCards();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Search failed: " + ex.Message);
+            }
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int h = ClientSize.Height;
+            int shift = Math.Max(0, (w - 701) / 2);
+
+            label2.Left = shift + 41;
+            cmbstart.Left = shift + 44;
+
+            label1.Left = shift + 189;
+            cmbto.Left = shift + 192;
+
+            panel1.Left = shift + 379;
+
+            label3.Left = shift + 435;
+            dtbjourney.Left = shift + 439;
+            btnSearch.Left = shift + 605;
+
+            label5.Left = shift + ((701 - label5.Width) / 2);
+
+            panel.Left = 0;
+            panel.Width = w;
+
+            flowLayoutPanel1.Width = w;
+            flowLayoutPanel1.Height = Math.Max(0, h - flowLayoutPanel1.Top);
+            ResizeBookingCards();
+        }
+
+        private void ResizeBookingCards()
+        {
+            int cardWidth = Math.Max(674, flowLayoutPanel1.ClientSize.Width - 25);
+            foreach (Control control in flowLayoutPanel1.Controls)
+            {
+                if (control is TrainBooking)
+                {
+                    control.Width = cardWidth;
+                }
             }
         }
 

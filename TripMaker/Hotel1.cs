@@ -34,6 +34,8 @@ namespace TripMaker
         public Hotel()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            flowLayoutPanel1.Resize += (s, e) => ResizeHotelCards();
         }
 
         private void Hotel_Load(object sender, EventArgs e)
@@ -59,6 +61,7 @@ namespace TripMaker
             {
                 MessageBox.Show("Error loading destinations: " + ex.Message);
             }
+            ApplyResponsiveLayout();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -102,6 +105,7 @@ namespace TripMaker
                                 sub_HotelName[i].HotelNamee = dt.Rows[i]["Hotel_Name"].ToString();
                                 flowLayoutPanel1.Controls.Add(sub_HotelName[i]);
                             }
+                            ResizeHotelCards();
 
                             panel.Visible = true;
                         }
@@ -111,6 +115,43 @@ namespace TripMaker
             catch (Exception ex)
             {
                 MessageBox.Show("Error during search: " + ex.Message);
+            }
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int h = ClientSize.Height;
+            int shift = Math.Max(0, (w - 701) / 2);
+
+            label2.Left = shift + 32;
+            cmbDestination.Left = shift + 36;
+
+            label4.Left = shift + 322;
+            dateTimePicker1.Left = shift + 325;
+
+            label5.Left = shift + 540;
+            dateTimePicker2.Left = shift + 544;
+
+            btnSearch.Left = shift + 596;
+
+            panel.Left = 0;
+            panel.Width = w;
+
+            flowLayoutPanel1.Width = w;
+            flowLayoutPanel1.Height = Math.Max(0, h - flowLayoutPanel1.Top);
+            ResizeHotelCards();
+        }
+
+        private void ResizeHotelCards()
+        {
+            int cardWidth = Math.Max(698, flowLayoutPanel1.ClientSize.Width - 20);
+            foreach (Control control in flowLayoutPanel1.Controls)
+            {
+                if (control is Sub_HotelName)
+                {
+                    control.Width = cardWidth;
+                }
             }
         }
     }

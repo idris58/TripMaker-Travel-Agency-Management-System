@@ -25,6 +25,8 @@ namespace TripMaker
         public Bus()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            flowLayoutPanel1.Resize += (s, e) => ResizeBookingCards();
         }
 
         private void Bus_Load(object sender, EventArgs e)
@@ -55,6 +57,48 @@ namespace TripMaker
             catch (Exception ex)
             {
                 MessageBox.Show("Exception during loading stations: " + ex.Message);
+            }
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int w = ClientSize.Width;
+            int h = ClientSize.Height;
+            int shift = Math.Max(0, (w - 701) / 2);
+
+            label2.Left = shift + 42;
+            cmbstart.Left = shift + 45;
+
+            label1.Left = shift + 190;
+            cmbto.Left = shift + 193;
+
+            panel1.Left = shift + 380;
+
+            label3.Left = shift + 436;
+            dtbjourney.Left = shift + 440;
+            btnSearch.Left = shift + 606;
+
+            label5.Left = shift + ((701 - label5.Width) / 2);
+
+            panel.Left = 0;
+            panel.Width = w;
+
+            flowLayoutPanel1.Left = 0;
+            flowLayoutPanel1.Width = w;
+            flowLayoutPanel1.Height = Math.Max(0, h - flowLayoutPanel1.Top);
+            ResizeBookingCards();
+        }
+
+        private void ResizeBookingCards()
+        {
+            int cardWidth = Math.Max(674, flowLayoutPanel1.ClientSize.Width - 25);
+            foreach (Control control in flowLayoutPanel1.Controls)
+            {
+                if (control is Busbooking)
+                {
+                    control.Width = cardWidth;
+                }
             }
         }
 
@@ -118,6 +162,7 @@ namespace TripMaker
                     flowLayoutPanel1.Controls.Add(operetor[i]);
                     panel.Visible = true;
                 }
+                ResizeBookingCards();
             }
             catch (Exception ex)
             {

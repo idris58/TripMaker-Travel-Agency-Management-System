@@ -34,6 +34,8 @@ namespace TripMaker
         public Login()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            ApplyResponsiveLayout();
         }
 
         private void ClearData()
@@ -120,6 +122,12 @@ namespace TripMaker
         private void btnSignup_Click(object sender, EventArgs e)
         {
             Signup.Instance.BringToFront();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            panel1.Left = Math.Max(10, (ClientSize.Width - panel1.Width) / 2);
+            panel1.Top = Math.Max(20, (ClientSize.Height - panel1.Height) / 2);
         }
     }
 }

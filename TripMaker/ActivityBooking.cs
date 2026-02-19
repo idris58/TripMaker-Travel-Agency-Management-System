@@ -18,6 +18,25 @@ namespace TripMaker
         public ActivityBooking()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int delta = Math.Max(0, ClientSize.Width - 674);
+
+            LblName.Left = Math.Max(180, (ClientSize.Width - LblName.Width) / 2);
+            loc.Left = 314 + delta;
+            label2.Left = 313 + delta;
+            lblLocation.Left = 409 + delta;
+            lblCategory.Left = 408 + delta;
+            co.Left = 342 + delta;
+            lblPrice.Left = 409 + delta;
+            btnbook.Left = 535 + delta;
+
+            panel1.Left = 63;
+            panel1.Width = Math.Max(551, 551 + delta);
         }
 
         private string name, price, location, category;

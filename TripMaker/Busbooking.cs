@@ -16,6 +16,25 @@ namespace TripMaker
         public Busbooking()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int delta = Math.Max(0, ClientSize.Width - 674);
+
+            Lblname.Left = Math.Max(180, (ClientSize.Width - Lblname.Width) / 2);
+            aa.Left = 352 + delta;
+            aaa.Left = 486 + delta;
+            label1.Left = 600 + delta;
+            lbldepT.Left = 369 + delta;
+            lblarvT.Left = 495 + delta;
+            lblprice.Left = 594 + delta;
+            btnbook.Left = 593 + delta;
+
+            panel1.Left = 75;
+            panel1.Width = Math.Max(551, 551 + delta);
         }
 
         private string Busname, start, ending, depTime, arrTime, price, btype;

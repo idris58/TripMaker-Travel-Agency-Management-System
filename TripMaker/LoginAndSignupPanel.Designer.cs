@@ -39,6 +39,7 @@ namespace TripMaker
             this.btnSignup.FlatAppearance.BorderSize = 0;
             this.btnSignup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnSignup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnSignup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSignup.Font = new System.Drawing.Font("Century", 10F);
             this.btnSignup.Image = global::TripMaker.Properties.Resources.sign_up;
             this.btnSignup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -57,6 +58,7 @@ namespace TripMaker
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogin.Font = new System.Drawing.Font("Century", 10F);
             this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -75,6 +77,7 @@ namespace TripMaker
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TripMaker.Properties.Resources.LoginLogoutBG;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.btnLogin);
             this.Margin = new System.Windows.Forms.Padding(2);

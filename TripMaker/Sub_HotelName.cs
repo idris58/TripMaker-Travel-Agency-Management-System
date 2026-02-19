@@ -8,6 +8,17 @@ namespace TripMaker
         public Sub_HotelName()
         {
             InitializeComponent();
+            Resize += (s, e) => ApplyResponsiveLayout();
+            ApplyResponsiveLayout();
+        }
+
+        private void ApplyResponsiveLayout()
+        {
+            int delta = Math.Max(0, ClientSize.Width - 698);
+
+            btnGo.Left = 549 + delta;
+            panel1.Left = 75;
+            panel1.Width = Math.Max(551, 551 + delta);
         }
 
         private static Sub_HotelName instance;
